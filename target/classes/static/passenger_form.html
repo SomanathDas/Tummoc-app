@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Scanner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/passenger_form_style.css" />
+</head>
+
+<body>
+<h2>Passenger Details</h2>
+<div class="container form-container">
+    <form id="passengerDetailsForm">
+        <div class="group">
+            <label for="passengerName">Passenger Name:</label>
+            <input type="text" id="passengerName" name="passengerName" required />
+        </div>
+        <div class="group">
+            <label for="identificationType">Identification Type:</label>
+            <input type="text" id="identificationType" name="identificationType" required />
+        </div>
+        <div class="group">
+            <label for="identificationNumber">Identification Number:</label>
+            <input type="text" id="identificationNumber" name="identificationNumber" required />
+        </div>
+        <div class="group">
+            <label for="passPurchased">Pass Purchased:</label>
+            <input type="datetime-local" id="passPurchased" name="passPurchased" required />
+        </div>
+        <div class="group">
+            <label for="passValidFrom">Pass Valid From:</label>
+            <input type="datetime-local" id="passValidFrom" name="passValidFrom" required />
+        </div>
+        <div class="group">
+            <label for="passValidTill">Pass Valid Till:</label>
+            <input type="datetime-local" id="passValidTill" name="passValidTill" required />
+        </div>
+        <div class="group">
+            <label for="passFare">Pass Fare:</label>
+            <select id="passFare" name="passFare" required>
+                <option value="70">₹70</option>
+                <option value="120">₹120</option>
+            </select>
+        </div>
+        <div class="passenger-avatar-container" onclick="openCamera()">
+            <img id="passengerAvatar" src="/static/image/avatar-round-3-1.png" class="passenger-avatar"
+                 alt="Passenger Avatar" />
+        </div>
+        <button type="submit">Save Details</button>
+    </form>
+</div>
+<!-- Camera Modal -->
+<div id="cameraModal" class="modal">
+    <div class="modal-content">
+        <video id="camera" autoplay></video>
+        <button class="captureButton" onclick="captureImage()"></button>
+    </div>
+</div>
+<script src="JS/passenger_form.js"></script>
+</body>
+</html>

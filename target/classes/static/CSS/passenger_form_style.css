@@ -1,0 +1,209 @@
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    margin-top: -5px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: -10px;
+    text-align: left;
+    justify-content: left;
+    margin-left: -90px;
+    font-size: 25px;
+}
+
+.group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.passenger-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.passenger-details {
+    width: 100%;
+}
+
+.passenger-details .group {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.info {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+.group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.group select:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+}
+
+.group option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.passenger-avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.passenger-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.passenger-avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.passenger-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* Modal Styles */
+/* General Modal Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Disable scroll */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black with opacity */
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#camera {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    background-color: black;
+}
+
+.captureButton {
+    position: absolute;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.captureButton:active {
+    background-color: lightgray;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 10px;
+    }
+
+    .captureButton {
+        width: 60px;
+        height: 60px;
+        font-size: 14px;
+        line-height: 60px;
+    }
+}

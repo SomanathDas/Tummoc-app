@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Tummoc Pass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/tummoc_main_style.css" />
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+
+<body>
+<div class="header">
+    <h1>Your Tummoc Pass</h1>
+    <a href="#" class="support">Support</a>
+</div>
+
+<div class="pass-container">
+    <div class="pass-header">
+        <img src="/static/image/bmtc%20logo.jfif" alt="BMTC Logo" />
+        <div class="pass-details">
+            <h2>Ordinary Day Pass</h2>
+            <div>
+                <span class="tag day">Day</span>
+                <span class="tag ordinary">Ordinary</span>
+            </div>
+            <div class="pass-id">
+                <p>Pass ID: <span class="pass-number">TEHDI274784</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="qr-section">
+        <div class="qr-container">
+            <img src="/static/image/output-onlinepngtools%20(2).png" alt="QR Code" />
+            <a href="#" class="validate-btn" onclick="openQRScanner()">Scan QR to Validate</a>
+        </div>
+    </div>
+</div>
+
+<div class="booking-details-container">
+    <div class="booking-details">
+        <h3>Booking Details</h3>
+        <div class="passenger-info">
+            <div class="passenger-details">
+                <div class="group">
+                    <p class="label">Passenger Name</p>
+                    <p class="info" id="passengerName"></p>
+                </div>
+                <div class="group">
+                    <p class="label">Identification Type</p>
+                    <p class="mid-info" id="identificationType"></p>
+                    <p class="info" id="identificationNumber"></p>
+                </div>
+                <div class="group">
+                    <p class="label">Pass Purchased</p>
+                    <p class="info" id="passPurchased"></p>
+                </div>
+            </div>
+            <div class="passenger-avatar-container">
+                <img src="" class="passenger-avatar" alt="Passenger Avatar" id="passengerAvatar" />
+                <img src="/static/image/tummoc%20bird%202%20(1).png" class="additional-logo"
+                     alt="Additional Logo" />
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="pass-validity">
+            <div class="validity-details">
+                <div class="group">
+                    <p class="label">Pass Valid From</p>
+                    <p class="info" id="passValidFrom"></p>
+                </div>
+                <div class="group">
+                    <p class="label">Pass Valid Till</p>
+                    <p class="info" id="passValidTill"></p>
+                </div>
+            </div>
+            <div class="pass-fare">
+                <p class="label">Pass Fare</p>
+                <p class="info" id="passFare"></p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="last-validated-bus-route">
+            <div class="last-validated">
+                <div class="group">
+                    <p class="label">Last Validated</p>
+                    <p id="lastValidatedInfo" class="info"></p>
+                </div>
+            </div>
+            <div class="bus-number">
+                <div class="group">
+                    <p class="label">Bus Number</p>
+                    <p id="busNumberInfo" class="info"></p>
+                </div>
+            </div>
+            <div class="route-number">
+                <div class="group">
+                    <p class="label">Route Number</p>
+                    <p class="info">500D</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QR Code Scanner -->
+<div id="qrModal" class="modal">
+    <div class="modal-content">
+        <div id="reader"></div>
+        <div class="overlay"></div>
+        <span class="close" onclick="closeQRScanner()">&times;</span>
+        <input type="range"
+               id="zoom-bar"
+               class="zoom-bar"
+               min="1"
+               max="3"
+               step="0.1"
+               value="1"
+               onchange="updateZoom()" />
+    </div>
+</div>
+<script src="JS/tummoc_main_JS.js"></script>
+</body>
+</html>
